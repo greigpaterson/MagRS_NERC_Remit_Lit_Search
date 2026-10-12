@@ -21,18 +21,18 @@ python3 openalex_output_counts.py --dump-ids   # also saves the matching work ID
 
 Summary output from the 12 October 2026 run:
 
-```
-technique	subset	total_1991_2025	1991-95	1996-00	2001-05	2006-10	2011-15	2016-20	2021-25
-FORC	all	1317	3	8	88	180	279	353	406
-FORC	remit	281	0	1	16	32	62	76	94
-FORC	nerc_funded	28	0	0	2	3	8	9	6
-Hysteresis	all	41770	2382	3250	4983	6089	7757	8584	8725
-Hysteresis	remit	1626	99	133	203	187	258	312	434
-Hysteresis	nerc_funded	47	3	4	0	6	14	7	13
-FMR	all	10098	514	628	1052	1550	1899	2271	2184
-FMR	remit	152	16	11	18	22	34	26	25
-FMR	nerc_funded	1	0	0	0	0	1	0	0
-```
+| technique | subset | total_1991_2025 | 1991-95 | 1996-00 | 2001-05 | 2006-10 | 2011-15 | 2016-20 | 2021-25 |
+|---|---|---|---|---|---|---|---|---|---|
+| FORC | all | 1317 | 3 | 8 | 88 | 180 | 279 | 353 | 406 |
+| FORC | remit | 281 | 0 | 1 | 16 | 32 | 62 | 76 | 94 |
+| FORC | nerc_funded | 28 | 0 | 0 | 2 | 3 | 8 | 9 | 6 |
+| Hysteresis | all | 41770 | 2382 | 3250 | 4983 | 6089 | 7757 | 8584 | 8725 |
+| Hysteresis | remit | 1626 | 99 | 133 | 203 | 187 | 258 | 312 | 434 |
+| Hysteresis | nerc_funded | 47 | 3 | 4 | 0 | 6 | 14 | 7 | 13 |
+| FMR | all | 10098 | 514 | 628 | 1052 | 1550 | 1899 | 2271 | 2184 |
+| FMR | remit | 152 | 16 | 11 | 18 | 22 | 34 | 26 | 25 |
+| FMR | nerc_funded | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+
 
 OpenAlex is continually updated, so later runs may give slightly different numbers.
 
@@ -47,11 +47,11 @@ All searches use `title_and_abstract.search`, which matches stemmed words or phr
 | Magnetic hysteresis | `hysteresis AND (magnetic OR magnetization OR magnetisation)` |
 | FMR | `"ferromagnetic resonance"` |
 
-| Subset | Extra filter |
-|---|---|
-| `all` | none |
-| `remit` (NERC-remit proxy) | the title or abstract also contains one of: paleo/palaeomagnetism/-ic, "rock magnetic/magnetism", "environmental magnetism", "mineral magnetism", geomagnetic, sediment, soil, rock, basalt, meteorite, magnetotactic, geological, loess, volcanic, marine, lake, atmospheric, pollution, dust, particulate |
-| `nerc_funded` | `funders.id:F4320334631` (Natural Environment Research Council, GB) |
+| Subset | Extra filter                                                                                                                                                                                                                                                                                                                    |
+|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `all` | none                                                                                                                                                                                                                                                                                                                            |
+| `remit` (NERC-remit proxy) | the title or abstract also contains one of: paleo/palaeomagnetism/-ic, "rock magnetic/magnetism", "environmental magnetism", "mineral magnetism", geomagnetic, sediment, soil, rock, basalt, biomagnetism, biogeomagnetism, magnetotactic, geological, loess, volcanic, marine, lake, atmospheric, pollution, dust, particulate |
+| `nerc_funded` | `funders.id:F4320334631` (Natural Environment Research Council, GB)                                                                                                                                                                                                                                                             |
 
 
 ## Caveats
